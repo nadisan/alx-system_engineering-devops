@@ -1,3 +1,1 @@
-Shell basics commads to start with
-Second project on shell
-Shell permissions
+0x02. Shell, I/O Redirections and filters
