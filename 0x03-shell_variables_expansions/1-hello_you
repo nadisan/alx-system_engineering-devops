@@ -1,2 +1,2 @@
 #!/bin/bash
-_user=whoami echo "hello root"
+hello MyUser
