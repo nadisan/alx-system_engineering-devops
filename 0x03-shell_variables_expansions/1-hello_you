@@ -1,2 +1,2 @@
 #!/bin/bash
-u="$(whoami)" echo "hello $u"
+_user="$(id -u -n)" echo "hello $_user"
