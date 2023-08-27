@@ -1,4 +1,7 @@
 1-distributed web infrastructure
+![SHXYonm](https://github.com/nadisan/alx-system_engineering-devops/assets/76504146/7ad47db7-d588-4614-bde9-f09f92a8109d)
+
+
 
 	Load Balancer: A load balancer like HAProxy can be used to distribute incoming traffic across multiple servers,
 	       ensuring that no single server is overloaded. It will be installed on one server.
