@@ -1,7 +1,7 @@
 Firewall: A firewall is needed to protect the server from unauthorized access and malicious attacks.
 
 
-Monitoring: Monitoring tools like Nagios or Zabbix should be used to monitor the health of the server, application, and database.
+Monitoring: Monitoring tools should be used to monitor the health of the server, application, and database.
 
 SSL Certificate: An SSL certificate should be installed on the server to enable secure communication between the server and clients.
 
