@@ -1,6 +1,5 @@
 Firewall: A firewall is needed to protect the server from unauthorized access and malicious attacks.
 
-Backup and Recovery: Regular backups of the website and database should be taken to ensure that data can be recovered in case of a disaster.
 
 Monitoring: Monitoring tools like Nagios or Zabbix should be used to monitor the health of the server, application, and database.
 
