@@ -1,3 +1,9 @@
+
+2-secured_and_monitored_web_infrastructure
+![eoF4x2Q](https://github.com/nadisan/alx-system_engineering-devops/assets/76504146/d3dac336-25ad-4d4e-9a29-c1c70e8bc520)
+
+
+
 Firewall: A firewall is needed to protect the server from unauthorized access and malicious attacks.
 
 
