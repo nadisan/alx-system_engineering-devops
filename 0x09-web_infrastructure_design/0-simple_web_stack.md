@@ -1,6 +1,8 @@
 0-simple_web_stack
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/VZd1Ukt" data-context="false" ><a href="//imgur.com/a/VZd1Ukt"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![VZd1Ukt](https://github.com/nadisan/alx-system_engineering-devops/assets/76504146/db4f14b8-1570-4fd7-9958-d2df2deeb039)
+
+
 
 Some specifics about this infrastructure
 
