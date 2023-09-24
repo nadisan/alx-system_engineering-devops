@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# SSH client configuration
+
+Host *
+IgnoreUnknown AddKeysToAgent,UseKeychain
+AddKeysToAgent yes
+UseKeychain yes
+IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/codingschool
+PasswordAuthentication no
