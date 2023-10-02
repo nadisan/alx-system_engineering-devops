@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Configuring a server with specification XYZ
+
+scp lary@192.168.1.100:linuxcheatsheet .
