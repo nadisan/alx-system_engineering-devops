@@ -7,11 +7,11 @@ while [ $x -lt 21 ]
 do
 	echo "$x"
 	case $x in
-		4) echo "bad luck for China"
+		4) echo "bad luck from China"
 			;;
-		8) echo "bad luck for Japan"
+		8) echo "bad luck from Japan"
 			;;
-		17) echo "bad luck for Italy" ;;
+		17) echo "bad luck from Italy" ;;
 	esac
 	x=$((x+=1))
 done
