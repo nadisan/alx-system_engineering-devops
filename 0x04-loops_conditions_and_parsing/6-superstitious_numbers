@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
 
-x=1
+x="1"
 
-while [ $x -lt 21 ]
+while [ $x -le 20 ]
 do
 	echo "$x"
 	case $x in
@@ -11,7 +11,8 @@ do
 			;;
 		8) echo "bad luck from Japan"
 			;;
-		17) echo "bad luck from Italy" ;;
+		17) echo "bad luck from Italy"
+			;;
 	esac
 	x=$((x+=1))
 done
