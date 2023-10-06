@@ -1,17 +1,9 @@
 #!/usr/bin/env bash
-# Installs nginx web server
+# conf nginx web server redirection
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo mkdir /etc/nginx/html
-sudo echo "Hello World!" > /etc/nginx/html/index.html
-sudo echo "{
-    listen 80;
-    listen [::]:80 default_server;
-    root   /etc/nginx/html;
-    index  index.html;
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-    }
-}" > /etc/nginx/sites-available/default
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+string="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "401 $string" /etc/nginx/sites-available/default
 sudo service nginx restart
