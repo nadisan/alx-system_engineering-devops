@@ -6,7 +6,7 @@ import csv
 
 if __name__ == "__main__":
     response = get('https://jsonplaceholder.typicode.com/todos/')
-    data = resopnse.json()
+    data = response.json()
 
     row = []
     response2 = get('https://jsonplaceholder.typicode.com/users')
@@ -21,10 +21,10 @@ if __name__ == "__main__":
 
         for i in data:
             row = []
-            if i['userid'] ==  int(argv[1]):
+            if i['userId'] ==  int(argv[1]):
                 row.append(i['userId'])
-                row.append(emplyoyee)
+                row.append(employee)
                 row.append(i['completed'])
                 row.append(i['title'])
                 
-                recored.writerow(row)
+                record.writerow(row)
