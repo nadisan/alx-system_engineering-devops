@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """  given employee ID,returns information about his/her TODO list progress"""
 
 from requests import get
@@ -21,7 +20,6 @@ if __name__ == "__main__":
     for i in data:
         if i.get('userId') == int(argv[1]):
             total += 1
-            employee = i.get('name')
 
             if i.get('completed') is True:
                 completed += 1
