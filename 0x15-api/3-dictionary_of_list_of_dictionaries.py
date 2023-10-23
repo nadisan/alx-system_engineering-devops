@@ -24,7 +24,7 @@ if __name__ == "__main__":
                 new_dict2['completed'] = i['completed']
                 row.append(new_dict2)
 
-    new_dict1[j['id']] = row
+        new_dict1[j['id']] = row
 
     with open("todo_all_employees.json", "w") as f:
         json_obj = json.dumps(new_dict1)
