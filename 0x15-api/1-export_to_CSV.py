@@ -21,10 +21,10 @@ if __name__ == "__main__":
 
         for i in data:
             row = []
-            if i['userId'] ==  int(argv[1]):
+            if i['userId'] == int(argv[1]):
                 row.append(i['userId'])
                 row.append(employee)
                 row.append(i['completed'])
                 row.append(i['title'])
-                
+
                 record.writerow(row)
