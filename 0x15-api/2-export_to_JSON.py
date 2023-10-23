@@ -20,7 +20,6 @@ if __name__ == "__main__":
 
     row = []
 
-
     for i in data:
         new_dict = {}
         if i['userId'] == int(argv[1]):
