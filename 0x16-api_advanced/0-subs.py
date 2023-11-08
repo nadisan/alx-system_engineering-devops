@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     else 0
     """
 
-     username = 'ledbag123'
+    username = 'ledbag123'
     password = 'Reddit72'
     user_pass_dict = {'user': username, 'passwd': password, 'api_type': 'json'}
 
