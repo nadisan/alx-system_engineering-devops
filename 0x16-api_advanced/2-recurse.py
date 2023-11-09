@@ -14,25 +14,19 @@ def recurse(subreddit, host_list=[], after="null"):
     Returns top 10 hotspots
     else 0
     """
-
     username = 'ledbag123'
     password = 'Reddit72'
     user_pass_dict = {'user': username, 'passwd': password, 'api_type': 'json'}
 
     headers = {'user-agent': '/u/ledbag123 API Python for Holberton School'}
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    payload = {"limit": "100", "after": after}
     client = requests.session()
     client.headers = headers
 
-    req = client.get(url, allow_redirects=False, params=payload)
+    req = client.get(url, allow_redirects=False)
     if req.status_code == 200:
         list_titles = req.json()['data']['children']
-        after = req.json()['data']['after']
-        if after is not None:
-            host_list.append(list_titles[len(host_list)]['data']['title'])
-            recurse(subreddit, host_list, after)
-        else:
-            return(host_list)
+        for title in list_titles[:10]:
+            print(title['data']['title'])
     else:
-        return(print("None"))
+        return (print("None"))
