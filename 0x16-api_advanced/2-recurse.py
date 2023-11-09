@@ -25,10 +25,10 @@ def recurse(subreddit, host_list=[], after="null"):
     client = requests.session()
     client.headers = headers
 
-    req = client.get(url, allow_redirects=Falsie, params=payload)
+    req = client.get(url, allow_redirects=False, params=payload)
     if req.status_code == 200:
         list_titles = req.json()['data']['children']
-        after = r.json()['data']['after']
+        after = req.json()['data']['after']
         if after is not None:
             host_list.append(list_titles[len(host_list)]['data']['title'])
             recurse(subreddit, host_list, after)
