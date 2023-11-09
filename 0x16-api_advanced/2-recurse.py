@@ -23,10 +23,10 @@ def recurse(subreddit, host_list=[], after="null"):
     client = requests.session()
     client.headers = headers
 
-    req = client.get(url, allow_redirects=False)
-    if req.status_code == 200:
-        list_titles = req.json()['data']['children']
-        for title in list_titles[:10]:
-            print(title['data']['title'])
+    r = client.get(url, allow_redirects=False)
+    if r.status_code == 200:
+        list_titles = r.json()['data']['children']
+        for a in list_titles[:10]:
+            print(a['data']['title'])
     else:
-        return (print("None"))
+        return(print("None"))
