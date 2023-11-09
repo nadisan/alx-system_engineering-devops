@@ -2,8 +2,8 @@
 """
 queries the Reddit API and returns the number of subscribers
 """
-import requests
 import json
+import requests
 import sys
 
 
