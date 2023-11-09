@@ -7,7 +7,6 @@ import requests
 import sys
 
 
-
 def recurse(subreddit, host_list=[], after="null"):
     """
     Fundtion queries reddit API
