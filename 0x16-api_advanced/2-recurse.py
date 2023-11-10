@@ -19,10 +19,10 @@ def recurse(subreddit, hot_list=[], page=1, limit=100):
         "User-Agent": "Mozilla"
     }
 
-    res = requests.get(url, params=params, headers=headers)
-    if res.status_code == 404:
+    req = requests.get(url, params=params, headers=headers)
+    if req.status_code == 404:
         return None
-    data = res.json()
+    data = req.json()
 
     if "data" in data and "children" in data["data"]:
         articles = data["data"]["children"]
