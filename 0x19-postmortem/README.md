@@ -1,6 +1,7 @@
 postmortem: Database Outage on 2023-11-12
 
 TL;DR: Our database took a nap for 30 minutes, but we're back up and running now. We're investigating the root cause and taking steps to prevent it from happening again.
+![image](https://github.com/nadisan/alx-system_engineering-devops/assets/76504146/b742e321-a8c8-495c-9f5e-8cbea03675be)
 
 What happened?
 
