@@ -1,23 +1,35 @@
 #!/usr/bin/python3
-""" Exporting csv files"""
-import json
+"""Script to paginate response"""
+
 import requests
-import sys
 
 
-def top_ten(subreddit):
-    """Read reddit API and return top 10 hotspots """
-    username = 'ledbag123'
-    password = 'Reddit72'
-    user_pass_dict = {'user': username, 'passwd': password, 'api_type': 'json'}
-    headers = {'user-agent': '/u/ledbag123 API Python for Holberton School'}
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    client = requests.session()
-    client.headers = headers
-    r = client.get(url, allow_redirects=False)
-    if r.status_code == 200:
-        list_titles = r.json()['data']['children']
-        for a in list_titles[:10]:
-            print(a['data']['title'])
-    else:
-        return(print("None"))
+def recurse(subreddit, hot_list=[], page=1, limit=100):
+    """A recursive function that queries the Reddit API
+    returns a list containing the titles
+    of all hot articles for a given subreddit.
+    """
+
+    if len(hot_list) >= limit:
+        return hot_list
+
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    params = {"page": page}
+    headers = {
+        "User-Agent": "Mozilla"
+    }
+
+    req = requests.get(url, params=params, headers=headers)
+    if req.status_code == 404:
+        return None
+    data = req.json()
+
+    if "data" in data and "children" in data["data"]:
+        articles = data["data"]["children"]
+        for article in articles:
+            hot_list.append(article["data"]["title"])
+
+    if "data" in data and "after" in data["data"]:
+        page += 1
+        return recurse(subreddit, hot_list, page)
+    return hot_list
