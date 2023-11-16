@@ -1,5 +1,5 @@
 
-u should look at the following URL's in order to grasp a solid understanding
+# u should look at the following URL's in order to grasp a solid understanding
 # of Nginx configuration files in order to fully unleash the power of Nginx.
 # https://www.nginx.com/resources/wiki/start/
 # https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
@@ -56,9 +56,15 @@ location /hbnb_static {alias /data/web_static/current/;}
         }
 
         # Serve /number_odd_or_even/ route on AirrBnB_clone_v2
-        location ~ /airbnb-dynamic/number_odd_or_even/{\d+}$ {
-            proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
-        }
+        # location ~ /airbnb-dynamic/number_odd_or_even/{\d+}$ {
+        #  proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        #}
+
+	location /airbnb-dynamic/number_odd_or_even/ {
+            rewrite /airbnb-dynamic/(.*) $1 break;
+            include proxy_params;
+	    proxy_pass http://localhost:5001/number_odd_or_even;
+    	}
 
         location / {
                 # First attempt to serve request as file, then
